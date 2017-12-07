@@ -5,12 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assignment_7___Cypher_Encoder_Decoder"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Caesar Cipher" Height="600" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="205*"/>
             <ColumnDefinition Width="312*"/>
         </Grid.ColumnDefinitions>
+        <Grid HorizontalAlignment="Left" Height="auto" Margin="10,10,0,0" VerticalAlignment="Top" Width="auto" Grid.ColumnSpan="2"/>
+        <Menu HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="auto" Grid.ColumnSpan="2"/>
+        <Menu HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="100">
+            <MenuItem x:Name="File_Menu" Header="File" Height="26" Width="789" Click="MenuItem_Click">
+                <MenuItem Header="Save File" HorizontalAlignment="Left" Height="39" Width="140" Click="MenuItem_Click_2"/>
+                <MenuItem x:Name="Open_File_Menu" Header="Open File" HorizontalAlignment="Left" Height="32" Width="140" Click="MenuItem_Click_1"/>
+            </MenuItem>
+        </Menu>
+        <Button x:Name="EncryptButton" Content="Encrypt" HorizontalAlignment="Left" Margin="95,530,0,0" VerticalAlignment="Top" Width="75" Click="Encrypt_Click"/>
+        <Button x:Name="DecryptButton" Content="Decrypt" Grid.Column="1" HorizontalAlignment="Left" Margin="252,530,0,0" VerticalAlignment="Top" Width="74" Click="DecryptButton_Click"/>
+        <TextBox x:Name="EncryptionText" HorizontalAlignment="Left" Height="461" Margin="10,31,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="756" Grid.ColumnSpan="2"/>
+        <DockPanel HorizontalAlignment="Left" Height="31" LastChildFill="False" VerticalAlignment="Top" Width="782" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>
